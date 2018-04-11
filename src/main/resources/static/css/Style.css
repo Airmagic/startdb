@@ -1,0 +1,21 @@
+/*This is the style for the website*/
+/*This is the body style*/
+body {
+    padding: 3rem;
+    background: darkseagreen;
+}
+
+/*This is the img style*/
+img.urgent-icon {
+    height: 1.5rem;
+}
+
+/*this is the line item style*/
+li {
+    min-height: 2rem;
+}
+
+/*This is the line item style*/
+li > * {
+    vertical-align: text-top;
+}

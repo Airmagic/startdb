@@ -1,0 +1,36 @@
+<!--supporting documents-->
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <!--style sheets for the page-->
+    <!-- Milligram stylesheet -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+    <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <!--title for the page-->
+    <title>All Task</title>
+</head>
+<!--body for the page-->
+<body>
+
+<!--Header -->
+<h1>All the Tasks</h1>
+
+<!--calling task from the db and it's a header-->
+<h2 th:text="${ task.size()} + 'task(s) to do' ">Tasks to Do!</h2>
+
+<!--unordered list -->
+<ul>
+    <!--lined items from the list-->
+    <li th:each="task : ${tasks}">
+        <span th:if="${task.urgent}"><img class="urgent-icon" src="img/urgent.png"></span>
+        <span th:text="${task.text}"></span>
+    </li>
+</ul>
+
+<!--a link to a new task-->
+<a href="/">add a new task</a>
+
+</body>
+</html>
